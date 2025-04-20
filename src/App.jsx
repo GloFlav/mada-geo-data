@@ -11,30 +11,29 @@ function App() {
   const [provinces, setProvinces] = useState([]);
 
   const handleDataAvailable = (data) => {
-    setProvinces(data); // Assurez-vous que `data` est un tableau d'objets province
+    // 'data' est désormais un tableau d’objets { name }
+    setProvinces(data);
   };
 
   return (
     <div style={{ padding: "2rem" }}>
       <h1>🌍 Sélection de province - Mada Geo Data</h1>
-
-      {/* ProvinceDataProvider donne accès aux données des provinces */}
       <ProvinceDataProvider onDataAvailable={handleDataAvailable} />
 
       <hr />
       <h2>🔽 Dropdown</h2>
       <ProvinceDropdown
-        selectedProvince={selectedProvince ? selectedProvince.name : ""}
-        onChange={(province) => setSelectedProvince(province)}
-        renderOption={(province) => `🌍 ${province.name}`} // Affichage du nom de la province
+        selectedProvince={selectedProvince}               // <-- objet ou null
+        onChange={setSelectedProvince}                   // reçoit { name }
+        renderOption={(province) => `🌍 ${province.name}`}
       />
 
       <hr />
       <h2>📻 Radio</h2>
       <ProvinceRadioGroup
-        selectedProvince={selectedProvince ? selectedProvince.name : ""}
-        onChange={(province) => setSelectedProvince(province)}
-        renderLabel={(province) => `✅ ${province.name}`} // Affichage du nom de la province
+        selectedProvince={selectedProvince}               // <-- objet ou null
+        onChange={setSelectedProvince}                   // reçoit { name }
+        renderLabel={(province) => `✅ ${province.name}`}
       />
 
       <hr />
@@ -42,29 +41,33 @@ function App() {
       <ProvinceCheckboxList
         selectedProvinces={multiProvinces}
         onChange={setMultiProvinces}
-        renderLabel={(province) => `📌 ${province.name}`} // Affichage du nom de la province
+        renderLabel={(province) => `📌 ${province.name}`}
       />
-      <p>Provinces sélectionnées : {multiProvinces.map((province) => province.name).join(", ")}</p>
+      <p>
+        Provinces sélectionnées :{" "}
+        {multiProvinces.map((p) => p.name).join(", ")}
+      </p>
 
       <hr />
       <h2>📑 Tabs</h2>
       <ProvinceTabs
-        selectedProvince={selectedProvince ? selectedProvince.name : ""}
-        onChange={(province) => setSelectedProvince(province)}
-        renderTab={(province) => `🗂️ ${province.name}`} // Affichage du nom de la province
+        selectedProvince={selectedProvince}
+        onChange={setSelectedProvince}
+        renderTab={(province) => `🗂️ ${province.name}`}
       />
 
       <hr />
       <h2>Provinces disponibles :</h2>
-      {/* Affichage des provinces récupérées */}
       <div>
         {provinces.length > 0 ? (
-          provinces.map((province) => (
-            <div key={province.name}>
-              <button onClick={() => setSelectedProvince(province)}>
-                {province.name}
-              </button>
-            </div>
+          provinces.map((prov) => (
+            <button
+              key={prov.name}
+              onClick={() => setSelectedProvince(prov)}
+              style={{ margin: "4px" }}
+            >
+              {prov.name}
+            </button>
           ))
         ) : (
           <p>Aucune province disponible.</p>
@@ -75,7 +78,6 @@ function App() {
         <div style={{ marginTop: "20px", fontWeight: "bold" }}>
           <h3>Province sélectionnée :</h3>
           <p>Nom : {selectedProvince.name}</p>
-          <p>Region ID : {selectedProvince.region_id}</p>
         </div>
       )}
     </div>

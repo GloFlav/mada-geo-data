@@ -1,0 +1,3 @@
+All region (checkbox, dropdown, data, radio, tab),
+region par province (checkbox, dropdown, data, radio, tab),
+region pprovince de checkbox (checkbox, dropdown, data, radio, tab),

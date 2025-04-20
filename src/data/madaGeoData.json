@@ -1,0 +1,573 @@
+{
+  "Antananarivo": {
+    "Analamanga": {
+      "region_id": 4,
+      "districts": [
+        {
+          "district": "Antananarivo-Renivohitra",
+          "zip_code": 101
+        },
+        {
+          "district": "Antananarivo-Atsimondrano",
+          "zip_code": 102
+        },
+        {
+          "district": "Antananarivo-Avaradrano",
+          "zip_code": 103
+        },
+        {
+          "district": "Ambohidratrimo",
+          "zip_code": 105
+        },
+        {
+          "district": "Andramasina",
+          "zip_code": 106
+        },
+        {
+          "district": "Anjozorobe",
+          "zip_code": 107
+        },
+        {
+          "district": "Ankazobe",
+          "zip_code": 108
+        },
+        {
+          "district": "Manjakandriana",
+          "zip_code": 116
+        },
+        {
+          "district": "Tsiroanomandidy",
+          "zip_code": 119
+        }
+      ]
+    },
+    "Vakinankaratra": {
+      "region_id": 5,
+      "districts": [
+        {
+          "district": "Ambatolampy",
+          "zip_code": 104
+        },
+        {
+          "district": "Antanifotsy",
+          "zip_code": 109
+        },
+        {
+          "district": "Antsirabe-I",
+          "zip_code": 110
+        },
+        {
+          "district": "Antsirabe-II",
+          "zip_code": 111
+        },
+        {
+          "district": "Betafo",
+          "zip_code": 113
+        },
+        {
+          "district": "Faratsiho",
+          "zip_code": 114
+        }
+      ]
+    },
+    "Itasy": {
+      "region_id": 3,
+      "districts": [
+        {
+          "district": "Arivonimamo",
+          "zip_code": 112
+        },
+        {
+          "district": "Miarinarivo",
+          "zip_code": 117
+        },
+        {
+          "district": "Soavinandriana",
+          "zip_code": 118
+        }
+      ]
+    },
+    "Bongolava": {
+      "region_id": 6,
+      "districts": [
+        {
+          "district": "Fenoarivo",
+          "zip_code": 115
+        }
+      ]
+    }
+  },
+  "Antsiranana": {
+    "Diana": {
+      "region_id": 1,
+      "districts": [
+        {
+          "district": "Antsiranana-I",
+          "zip_code": 201
+        },
+        {
+          "district": "Antsiranana-II",
+          "zip_code": 202
+        },
+        {
+          "district": "Ambanja",
+          "zip_code": 203
+        },
+        {
+          "district": "Ambilobe",
+          "zip_code": 204
+        },
+        {
+          "district": "Nosy-Be",
+          "zip_code": 207
+        }
+      ]
+    },
+    "Sava": {
+      "region_id": 2,
+      "districts": [
+        {
+          "district": "Andapa",
+          "zip_code": 205
+        },
+        {
+          "district": "Antalaha",
+          "zip_code": 206
+        },
+        {
+          "district": "Sambava",
+          "zip_code": 208
+        },
+        {
+          "district": "Vohimarina",
+          "zip_code": 209
+        }
+      ]
+    }
+  },
+  "Fianarantsoa": {
+    "Haute-Matsiatra": {
+      "region_id": 15,
+      "districts": [
+        {
+          "district": "Fianarantsoa-I",
+          "zip_code": 301
+        },
+        {
+          "district": "Fianarantsoa-II",
+          "zip_code": 302
+        },
+        {
+          "district": "Ambalavao",
+          "zip_code": 303
+        },
+        {
+          "district": "Ambohimahasoa",
+          "zip_code": 305
+        },
+        {
+          "district": "Ikalamavony",
+          "zip_code": 314
+        }
+      ]
+    },
+    "Amoron'i Mania": {
+      "region_id": 14,
+      "districts": [
+        {
+          "district": "Ambatofinandrahana",
+          "zip_code": 304
+        },
+        {
+          "district": "Ambositra",
+          "zip_code": 306
+        },
+        {
+          "district": "Fandriana",
+          "zip_code": 308
+        },
+        {
+          "district": "Manandriana",
+          "zip_code": 323
+        }
+      ]
+    },
+    "Atsimo-Atsinanana": {
+      "region_id": 17,
+      "districts": [
+        {
+          "district": "Befotaka",
+          "zip_code": 307
+        },
+        {
+          "district": "Farafangana",
+          "zip_code": 309
+        },
+        {
+          "district": "Midongy-Atsimo",
+          "zip_code": 318
+        },
+        {
+          "district": "Vangaindrano",
+          "zip_code": 320
+        },
+        {
+          "district": "Vondrozo",
+          "zip_code": 322
+        }
+      ]
+    },
+    "Vatovavy": {
+      "region_id": 16,
+      "districts": [
+        {
+          "district": "Ifanadiana",
+          "zip_code": 312
+        },
+        {
+          "district": "Mananjary",
+          "zip_code": 317
+        },
+        {
+          "district": "Nosy-Varika",
+          "zip_code": 319
+        }
+      ]
+    },
+    "Fitovinany": {
+      "region_id": 23,
+      "districts": [
+        {
+          "district": "Ikongo",
+          "zip_code": 310
+        },
+        {
+          "district": "Manakara",
+          "zip_code": 316
+        },
+        {
+          "district": "Vohipeno",
+          "zip_code": 321
+        }
+      ]
+    },
+    "Ihorombe": {
+      "region_id": 18,
+      "districts": [
+        {
+          "district": "Iakora",
+          "zip_code": 311
+        },
+        {
+          "district": "Ihosy",
+          "zip_code": 313
+        },
+        {
+          "district": "Ivohibe",
+          "zip_code": 315
+        }
+      ]
+    }
+  },
+  "Mahajanga": {
+    "Boeny": {
+      "region_id": 8,
+      "districts": [
+        {
+          "district": "Mahajanga-I",
+          "zip_code": 401
+        },
+        {
+          "district": "Mahajanga-II",
+          "zip_code": 402
+        },
+        {
+          "district": "Ambato-Boeny",
+          "zip_code": 403
+        },
+        {
+          "district": "Marovoay",
+          "zip_code": 416
+        },
+        {
+          "district": "Mitsinjo",
+          "zip_code": 417
+        },
+        {
+          "district": "Soalala",
+          "zip_code": 420
+        }
+      ]
+    },
+    "Melaky": {
+      "region_id": 10,
+      "districts": [
+        {
+          "district": "Ambatomainty",
+          "zip_code": 404
+        },
+        {
+          "district": "Antsalova",
+          "zip_code": 406
+        },
+        {
+          "district": "Besalampy",
+          "zip_code": 410
+        },
+        {
+          "district": "Maintirano",
+          "zip_code": 413
+        },
+        {
+          "district": "Morafanobe",
+          "zip_code": 418
+        }
+      ]
+    },
+    "Sofia": {
+      "region_id": 7,
+      "districts": [
+        {
+          "district": "Analalava",
+          "zip_code": 405
+        },
+        {
+          "district": "Antsihihy",
+          "zip_code": 407
+        },
+        {
+          "district": "Bealanana",
+          "zip_code": 408
+        },
+        {
+          "district": "Befandriana-Avaratra",
+          "zip_code": 409
+        },
+        {
+          "district": "Mampikony",
+          "zip_code": 414
+        },
+        {
+          "district": "Mandritsara",
+          "zip_code": 415
+        },
+        {
+          "district": "Port-Bergé",
+          "zip_code": 419
+        }
+      ]
+    },
+    "Betsiboka": {
+      "region_id": 9,
+      "districts": [
+        {
+          "district": "Kandreho",
+          "zip_code": 411
+        },
+        {
+          "district": "Maevatanana",
+          "zip_code": 412
+        },
+        {
+          "district": "Tsaratanana",
+          "zip_code": 421
+        }
+      ]
+    }
+  },
+  "Toamasina": {
+    "Atsinanana": {
+      "region_id": 12,
+      "districts": [
+        {
+          "district": "Toamasina-I",
+          "zip_code": 501
+        },
+        {
+          "district": "Toamasina-II",
+          "zip_code": 502
+        },
+        {
+          "district": "Antanambao-Manampotsy",
+          "zip_code": 507
+        },
+        {
+          "district": "Ampasimanolotra",
+          "zip_code": 508
+        },
+        {
+          "district": "Mahanoro",
+          "zip_code": 510
+        },
+        {
+          "district": "Marolambo",
+          "zip_code": 513
+        },
+        {
+          "district": "Vatomandry",
+          "zip_code": 517
+        }
+      ]
+    },
+    "Alaotra-Mangoro": {
+      "region_id": 11,
+      "districts": [
+        {
+          "district": "Ambatondrazaka",
+          "zip_code": 503
+        },
+        {
+          "district": "Amparafaravola",
+          "zip_code": 504
+        },
+        {
+          "district": "Andilamena",
+          "zip_code": 505
+        },
+        {
+          "district": "Anosibe",
+          "zip_code": 506
+        },
+        {
+          "district": "Moramanga",
+          "zip_code": 514
+        }
+      ]
+    },
+    "Analanjirofo": {
+      "region_id": 13,
+      "districts": [
+        {
+          "district": "Fenoarivo-Atsinanana",
+          "zip_code": 509
+        },
+        {
+          "district": "Mananara",
+          "zip_code": 511
+        },
+        {
+          "district": "Maroansetra",
+          "zip_code": 512
+        },
+        {
+          "district": "Sainte-Marie",
+          "zip_code": 515
+        },
+        {
+          "district": "Soanierana-Ivongo",
+          "zip_code": 516
+        },
+        {
+          "district": "Vavatenina",
+          "zip_code": 518
+        }
+      ]
+    }
+  },
+  "Toliara": {
+    "Atsimo-Andrefana": {
+      "region_id": 20,
+      "districts": [
+        {
+          "district": "Toliara-I",
+          "zip_code": 601
+        },
+        {
+          "district": "Toliara-II",
+          "zip_code": 602
+        },
+        {
+          "district": "Ampanihy",
+          "zip_code": 605
+        },
+        {
+          "district": "Ankazoabo-Atsimo",
+          "zip_code": 606
+        },
+        {
+          "district": "Benenitra",
+          "zip_code": 610
+        },
+        {
+          "district": "Beroroha",
+          "zip_code": 611
+        },
+        {
+          "district": "Betioky-Atsimo",
+          "zip_code": 612
+        },
+        {
+          "district": "Morombe",
+          "zip_code": 618
+        },
+        {
+          "district": "Sakaraha",
+          "zip_code": 620
+        }
+      ]
+    },
+    "Anosy": {
+      "region_id": 22,
+      "districts": [
+        {
+          "district": "Amboasary-Atsimo",
+          "zip_code": 603
+        },
+        {
+          "district": "Betroka",
+          "zip_code": 613
+        },
+        {
+          "district": "Taolanaro",
+          "zip_code": 614
+        }
+      ]
+    },
+    "Androy": {
+      "region_id": 21,
+      "districts": [
+        {
+          "district": "Ambovombe-Androy",
+          "zip_code": 604
+        },
+        {
+          "district": "Bekily",
+          "zip_code": 607
+        },
+        {
+          "district": "Beloha",
+          "zip_code": 609
+        },
+        {
+          "district": "Tsiombe",
+          "zip_code": 621
+        }
+      ]
+    },
+    "Menabe": {
+      "region_id": 19,
+      "districts": [
+        {
+          "district": "Belo-sur-Tsiribihina",
+          "zip_code": 608
+        },
+        {
+          "district": "Mahabo",
+          "zip_code": 615
+        },
+        {
+          "district": "Manja",
+          "zip_code": 616
+        },
+        {
+          "district": "Miandrivazo",
+          "zip_code": 617
+        },
+        {
+          "district": "Morondava",
+          "zip_code": 619
+        }
+      ]
+    }
+  }
+}

@@ -120,8 +120,12 @@ function App() {
   };
 
   return (
+    
     <div style={{ padding: "2rem" }}>
-      <h1>Sélection géographique - Mada Geo Data</h1>
+      
+      <h1>Test react-mada-location</h1>
+      {/* <ProvinceDropdown /> */}
+      {/* <h1>Sélection géographique - Mada Geo Data</h1> */}
 
       <div style={{ display: "flex", gap: "2rem" }}>
         {/* Colonne Province */}

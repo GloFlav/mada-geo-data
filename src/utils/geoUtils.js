@@ -2,144 +2,85 @@
 
 import data from "../data/madaGeoData.json";
 
-// Récupérer toutes les provinces
-export const getProvinces = () => Object.keys(data);
+// Récupérer toutes les provinces (avec leurs régions et districts)
+export const getAllProvincesInfo = () => data;
 
-// Récupérer les régions (nom + ID) pour une province donnée
-export const getRegionsByProvince = (province) =>
+// Récupérer toutes les régions (avec region_id et districts)
+export const getAllRegionsInfo = () => {
+  let regions = [];
+  Object.entries(data).forEach(([provinceName, regionsData]) => {
+    Object.entries(regionsData).forEach(([regionName, regionData]) => {
+      regions.push({
+        province: provinceName,
+        region: regionName,
+        region_id: regionData.region_id,
+        districts: regionData.districts,
+      });
+    });
+  });
+  return regions;
+};
+
+// Récupérer tous les districts (avec province, région, district, zip_code)
+export const getAllDistrictsInfo = () => {
+  let districts = [];
+  Object.entries(data).forEach(([provinceName, regionsData]) => {
+    Object.entries(regionsData).forEach(([regionName, regionData]) => {
+      regionData.districts.forEach((district) => {
+        districts.push({
+          province: provinceName,
+          region: regionName,
+          district: district.district,
+          zip_code: district.zip_code || null,
+        });
+      });
+    });
+  });
+  return districts;
+};
+
+// Récupérer toutes les régions d’une province donnée (avec region_id et districts)
+export const getFullRegionsByProvince = (province) =>
   province && data[province]
     ? Object.entries(data[province]).map(([regionName, regionData]) => ({
-        name: regionName,
+        region: regionName,
         region_id: regionData.region_id,
+        districts: regionData.districts,
       }))
     : [];
 
-// Récupérer tous les districts (avec code postal) pour une région d’une province donnée
-export const getDistrictsByProvinceAndRegion = (province, region) =>
-  province && region && data[province]?.[region]?.districts
-    ? data[province][region].districts.map((district) => ({
-        district: district.district,
-        zip_code: district.zip_code || null,
-      }))
-    : [];
-
-// Récupérer tous les districts (avec code postal) d’une province donnée
-export const getDistrictsByProvince = (province) => {
+// Récupérer tous les districts d’une région donnée (avec province et zip_code)
+export const getFullDistrictsByRegion = (regionName) => {
   let districts = [];
-  if (province && data[province]) {
-    Object.values(data[province]).forEach((region) => {
-      districts = [
-        ...districts,
-        ...region.districts.map((district) => ({
+  Object.entries(data).forEach(([provinceName, regionsData]) => {
+    if (regionsData[regionName]) {
+      regionsData[regionName].districts.forEach((district) => {
+        districts.push({
+          province: provinceName,
+          region: regionName,
           district: district.district,
           zip_code: district.zip_code || null,
-        })),
-      ];
-    });
-  }
-  return districts;
-};
-
-// Récupérer tous les districts (avec code postal) pour une région (toutes provinces confondues)
-export const getDistrictsByRegion = (regionName) => {
-  let districts = [];
-  Object.values(data).forEach((province) => {
-    if (province[regionName]) {
-      districts = [
-        ...districts,
-        ...province[regionName].districts.map((district) => ({
-          district: district.district,
-          zip_code: district.zip_code || null,
-        })),
-      ];
-    }
-  });
-  return districts;
-};
-
-// Récupérer tous les districts avec leur code postal (toutes régions, toutes provinces)
-export const getDistrictsWithZipCode = () => {
-  let districts = [];
-  Object.values(data).forEach((province) => {
-    Object.values(province).forEach((region) => {
-      districts = [
-        ...districts,
-        ...region.districts
-          .filter((d) => d.zip_code)
-          .map((district) => ({
-            district: district.district,
-            zip_code: district.zip_code,
-          })),
-      ];
-    });
-  });
-  return districts;
-};
-
-// Récupérer tous les districts sans code postal
-export const getDistrictsWithoutZipCode = () => {
-  let districts = [];
-  Object.values(data).forEach((province) => {
-    Object.values(province).forEach((region) => {
-      districts = [
-        ...districts,
-        ...region.districts
-          .filter((d) => !d.zip_code)
-          .map((district) => district.district),
-      ];
-    });
-  });
-  return districts;
-};
-
-// Récupérer les districts avec et sans code postal pour une province
-export const getDistrictsWithAndWithoutZipCodeByProvince = (province) => {
-  let withZipCode = [];
-  let withoutZipCode = [];
-  if (province && data[province]) {
-    Object.values(data[province]).forEach((region) => {
-      region.districts.forEach((district) => {
-        if (district.zip_code) {
-          withZipCode.push({
-            district: district.district,
-            zip_code: district.zip_code,
-          });
-        } else {
-          withoutZipCode.push(district.district);
-        }
-      });
-    });
-  }
-  return { withZipCode, withoutZipCode };
-};
-
-// Récupérer les districts avec et sans code postal pour une région
-export const getDistrictsWithAndWithoutZipCodeByRegion = (regionName) => {
-  let withZipCode = [];
-  let withoutZipCode = [];
-  Object.values(data).forEach((province) => {
-    if (province[regionName]) {
-      province[regionName].districts.forEach((district) => {
-        if (district.zip_code) {
-          withZipCode.push({
-            district: district.district,
-            zip_code: district.zip_code,
-          });
-        } else {
-          withoutZipCode.push(district.district);
-        }
+        });
       });
     }
   });
-  return { withZipCode, withoutZipCode };
+  return districts;
 };
 
-// Récupérer l'ID d'une région à partir de son nom (toutes provinces confondues)
-export const getRegionIdByName = (regionName) => {
-  for (const province of Object.values(data)) {
-    if (province[regionName]) {
-      return province[regionName].region_id;
-    }
+// Récupérer tous les districts d’une province donnée (avec région et zip_code)
+export const getFullDistrictsByProvince = (province) => {
+  let districts = [];
+  if (province && data[province]) {
+    Object.entries(data[province]).forEach(([regionName, regionData]) => {
+      regionData.districts.forEach((district) => {
+        districts.push({
+          province,
+          region: regionName,
+          district: district.district,
+          zip_code: district.zip_code || null,
+        });
+      });
+    });
   }
-  return null;
+  return districts;
 };

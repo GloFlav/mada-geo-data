@@ -1,6 +1,6 @@
 {
   "name": "react-mada-location",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "description": "Application géodonnée pour Madagascar, basée sur React et Vite",
   "author": "guil_flav",

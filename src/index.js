@@ -32,6 +32,3 @@ export { default as DistrictByProvinceSelectorHeadless } from "./components/dist
 
 // Utils
 export * as geoUtils from "./utils/geoUtils.js";
-
-// Styles globaux
-import "./styles/global.css";
